@@ -8,8 +8,9 @@ public:
     MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
 
 private:
-    void OnFetchData(wxCommandEvent& event);  // Methode zum Abrufen der Daten
-    void OnExit(wxCommandEvent& event);  // Methode zum Beenden der Anwendung
+    void OnFetchData(wxCommandEvent& event);  // Methode für "Daten abrufen"
+    void OnEditUser(wxCommandEvent& event);   // Methode für "Benutzer bearbeiten"
+    void OnExit(wxCommandEvent& event);       // Methode für "Beenden"
 
     wxDECLARE_EVENT_TABLE();
 };

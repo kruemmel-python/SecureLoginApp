@@ -4,7 +4,8 @@
 
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
 EVT_MENU(10001, MainFrame::OnFetchData)  // Menüpunkt "Daten abrufen"
-EVT_MENU(wxID_EXIT, MainFrame::OnExit)  // Menüpunkt "Beenden"
+EVT_MENU(wxID_EXIT, MainFrame::OnExit)   // Menüpunkt "Beenden"
+EVT_MENU(10002, MainFrame::OnEditUser)   // Menüpunkt "Benutzer bearbeiten"
 wxEND_EVENT_TABLE()
 
 MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
@@ -19,6 +20,11 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
     fileMenu->AppendSeparator();
     fileMenu->Append(wxID_EXIT, "Beenden");
     menuBar->Append(fileMenu, "Datei");
+
+    // "Bearbeiten"-Menü erstellen (zweite Menüleiste)
+    wxMenu* editMenu = new wxMenu;
+    editMenu->Append(10002, "Benutzer bearbeiten");
+    menuBar->Append(editMenu, "Bearbeiten");
 
     // Menüleiste dem Frame hinzufügen
     SetMenuBar(menuBar);
@@ -45,6 +51,11 @@ void MainFrame::OnFetchData(wxCommandEvent& event) {
 
     // Zeige die Daten in einer MessageBox an
     wxMessageBox(data, "Benutzerdaten", wxOK | wxICON_INFORMATION);
+}
+
+void MainFrame::OnEditUser(wxCommandEvent& event) {
+    // Hier kannst du die Logik zum Bearbeiten von Benutzern hinzufügen
+    wxMessageBox("Benutzer bearbeiten wurde ausgewählt.", "Bearbeiten", wxOK | wxICON_INFORMATION);
 }
 
 void MainFrame::OnExit(wxCommandEvent& event) {
