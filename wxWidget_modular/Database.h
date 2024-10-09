@@ -5,24 +5,28 @@
 #include <string>
 #include <vector>
 #include <mutex>  // Für Thread-Sicherheit
-#include <openssl/sha.h>  // Für SHA-256 Hashing
 
 class Database {
 public:
+    // Initialisiert die Datenbank und erstellt Tabellen, falls sie nicht existieren
     static bool Initialize();
 
-    // Login-Methode: Zweiter Parameter jetzt ohne const, da das Passwort verändert wird
+    // Login und Registrierung für Mitarbeiter
     static bool Login(const std::string& username, std::string password);
-
     static bool Register(const std::string& username, const std::string& password);
 
-    // Neue Methode zum Abrufen aller Benutzer
-    static std::vector<std::pair<std::string, std::string>> FetchAllUsers();  // Deklaration der Methode
+    // Kundenbezogene Methoden
+    static bool AddCustomer(const std::string& name, const std::string& adresse);
+
+    // Benutzerdaten abrufen (Mitarbeiter)
+    static std::vector<std::pair<int, std::string>> FetchAllUsers();
+
+    // Hashing und Salt-Generierung
+    static std::string HashPassword(const std::string& password, const std::string& salt);
+    static std::string GenerateSalt();  // Methode zur Generierung eines Salts
 
 private:
     static sqlite3* db;
-    static std::string HashPassword(const std::string& password, const std::string& salt);
-    static std::string GenerateSalt();  // Methode zur Generierung eines Salts
     static std::mutex dbMutex;  // Mutex für Thread-Sicherheit
 };
 

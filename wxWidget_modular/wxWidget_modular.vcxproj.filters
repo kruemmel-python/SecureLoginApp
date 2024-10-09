@@ -33,6 +33,12 @@
     <ClCompile Include="MainFrame.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Mitarbeiter.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Kunde.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoginFrame.h">
@@ -48,6 +54,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="MainFrame.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Mitarbeiter.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Kunde.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -129,17 +129,21 @@
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Kunde.cpp" />
     <ClCompile Include="LoginFrame.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainFrame.cpp" />
+    <ClCompile Include="Mitarbeiter.cpp" />
     <ClCompile Include="UnitTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Database.h" />
+    <ClInclude Include="Kunde.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="LoginFrame.h" />
     <ClInclude Include="MainFrame.h" />
+    <ClInclude Include="Mitarbeiter.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
