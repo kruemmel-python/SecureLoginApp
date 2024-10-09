@@ -1,0 +1,35 @@
+GUI initialized.
+Attempting registration for user: ralf
+GUI initialized.
+Attempting registration for user: ralf
+GUI initialized.
+Database initialized and user table created (if not exists).
+Attempting registration for user: ralf
+User ralf registered successfully.
+Registration successful for user: ralf
+Registration successful for user: ralf
+GUI initialized.
+Database initialized and user table created (if not exists).
+Attempting login for user: ralf
+User ralf logged in successfully.
+Login successful for user: ralf
+GUI initialized.
+Database initialized and user table created (if not exists).
+Attempting login for user: ralf
+User ralf logged in successfully.
+Login successful for user: ralf
+GUI initialized.
+Database initialized and user table created (if not exists).
+Attempting registration for user: ralf
+Failed to prepare statement: table users has no column named salt
+Registration failed for user: ralf
+Registration failed for user: ralf
+GUI initialized.
+Database initialized and user table created (if not exists).
+Attempting registration for user: ralf
+User ralf registered successfully.
+Registration successful for user: ralf
+Registration successful for user: ralf
+Attempting login for user: ralf
+User ralf logged in successfully.
+Login successful for user: ralf

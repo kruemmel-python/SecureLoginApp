@@ -1,0 +1,8 @@
+{
+  "database": {
+    "path": "employees.db"
+  },
+  "ui": {
+    "theme": "light"
+  }
+}
